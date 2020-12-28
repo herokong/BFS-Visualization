@@ -2,6 +2,10 @@ import pygame
 import math
 from queue import PriorityQueue, Queue
 
+# Instructure left click will make a block, and right click will delete a block.
+# If you delete a start or end block, the next you left click will create that block.
+# press space to start the algorithm, and c to reset everything.
+
 
 WIDTH = 800
 WIN = pygame.display.set_mode((WIDTH, WIDTH))
@@ -164,7 +168,7 @@ def algorithm(draw, grid, start, end):
         end.make_end()
         return True
     
-    draw()
+    draw() # This draw function will determine you want to display how it works or not.
 
 # If it is a path to our destination, we change the spot's color to green to resemble path.
 def path_construction(path, draw, end):
